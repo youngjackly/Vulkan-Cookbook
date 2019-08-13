@@ -102,6 +102,7 @@ WindowFramework::WindowFramework( const char               * window_title,
 					   screen->root_visual,           /* visual              */
 					   mask, values);                 /* masks */
 
+
 	/* Map the window on the screen */
 	xcb_map_window (c, win);
 

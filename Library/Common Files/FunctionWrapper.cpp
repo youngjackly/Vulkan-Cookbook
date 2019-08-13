@@ -1,7 +1,5 @@
 #include "FunctionWrapper.h"
-
-
-
+#include "FunctionLoader.h"
 
 namespace VulkanCookbook {
 
@@ -135,38 +133,6 @@ void DestroyVulkanInstance( VkInstance & instance ) {
 	}
 }
 
-} // namespace VulkanCookbook
-
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 01 Instance and Devices
-// Recipe:  13 Checking available queue families and their properties
-
-namespace VulkanCookbook {
-
   bool CheckAvailableQueueFamiliesAndTheirProperties( VkPhysicalDevice                       physical_device,
                                                       std::vector<VkQueueFamilyProperties> & queue_families ) {
     uint32_t queue_families_count = 0;
@@ -187,38 +153,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 01 Instance and Devices
-// Recipe:  14 Selecting index of a queue family with desired capabilities
-
-
-namespace VulkanCookbook {
-
   bool SelectIndexOfQueueFamilyWithDesiredCapabilities( VkPhysicalDevice   physical_device,
                                                         VkQueueFlags       desired_capabilities,
                                                         uint32_t         & queue_family_index ) {
@@ -236,38 +170,6 @@ namespace VulkanCookbook {
     }
     return false;
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 01 Instance and Devices
-// Recipe:  15 Creating a logical device
-
-
-namespace VulkanCookbook {
 
   bool CreateLogicalDevice( VkPhysicalDevice                  physical_device,
                             std::vector<QueueInfo>            queue_infos,
@@ -322,75 +224,9 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 01 Instance and Devices
-// Recipe:  17 Getting a device queue
-
-
-namespace VulkanCookbook {
-
   void GetDeviceQueue( VkDevice logical_device, uint32_t queue_family_index, uint32_t queue_index, VkQueue & queue ) {
     vkGetDeviceQueue( logical_device, queue_family_index, queue_index, &queue );
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 01 Instance and Devices
-// Recipe:  18 Creating a logical device with geometry shaders and graphics and compute queues
-#include "FunctionLoader.h"
-#include "FunctionWrapper.h"
-
-
-namespace VulkanCookbook {
 
   bool CreateLogicalDeviceWithGeometryShadersAndGraphicsAndComputeQueues( VkInstance   instance,
                                                                           VkDevice   & logical_device,
@@ -440,37 +276,6 @@ namespace VulkanCookbook {
     return false;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 01 Instance and Devices
-// Recipe:  19 Destroying a logical device
-
-
-namespace VulkanCookbook {
 
   void DestroyLogicalDevice( VkDevice & logical_device ) {
     if( logical_device ) {

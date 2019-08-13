@@ -50,38 +50,6 @@ namespace VulkanCookbook {
     return CreateVulkanInstance( desired_extensions, application_name, instance );
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 02 Image Presentation
-// Recipe:  02 Creating a presentation surface
-
-
-namespace VulkanCookbook {
-
   bool CreatePresentationSurface( VkInstance         instance,
                                   WindowParameters   window_parameters,
                                   VkSurfaceKHR     & presentation_surface ) {
@@ -133,38 +101,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 02 Image Presentation
-// Recipe:  03 Selecting a queue family that supports presentation to a given surface
-#include "FunctionWrapper.h"
-
-namespace VulkanCookbook {
-
   bool SelectQueueFamilyThatSupportsPresentationToGivenSurface( VkPhysicalDevice   physical_device,
                                                                 VkSurfaceKHR       presentation_surface,
                                                                 uint32_t         & queue_family_index ) {
@@ -185,37 +121,6 @@ namespace VulkanCookbook {
     return false;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 02 Image Presentation
-// Recipe:  04 Creating a logical device with WSI extensions enabled
-
-namespace VulkanCookbook {
-
   bool CreateLogicalDeviceWithWsiExtensionsEnabled( VkPhysicalDevice            physical_device,
                                                     std::vector< QueueInfo >    queue_infos,
                                                     std::vector<char const *> & desired_extensions,
@@ -225,37 +130,6 @@ namespace VulkanCookbook {
 
     return CreateLogicalDevice( physical_device, queue_infos, desired_extensions, desired_features, logical_device );
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 02 Image Presentation
-// Recipe:  05 Selecting a desired presentation mode
-
-namespace VulkanCookbook {
 
   bool SelectDesiredPresentationMode( VkPhysicalDevice   physical_device,
                                       VkSurfaceKHR       presentation_surface,
@@ -300,38 +174,6 @@ namespace VulkanCookbook {
     return false;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 02 Image Presentation
-// Recipe:  06 Getting capabilities of a presentation surface
-
-
-namespace VulkanCookbook {
-
   bool GetCapabilitiesOfPresentationSurface( VkPhysicalDevice           physical_device,
                                              VkSurfaceKHR               presentation_surface,
                                              VkSurfaceCapabilitiesKHR & surface_capabilities ) {
@@ -344,37 +186,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 02 Image Presentation
-// Recipe:  07 Selecting a number of swapchain images
-
-namespace VulkanCookbook {
-
   bool SelectNumberOfSwapchainImages( VkSurfaceCapabilitiesKHR const & surface_capabilities,
                                       uint32_t                       & number_of_images ) {
     number_of_images = surface_capabilities.minImageCount + 1;
@@ -384,38 +195,6 @@ namespace VulkanCookbook {
     }
     return true;
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 02 Image Presentation
-// Recipe:  08 Choosing a size of swapchain images
-
-
-namespace VulkanCookbook {
 
   bool ChooseSizeOfSwapchainImages( VkSurfaceCapabilitiesKHR const & surface_capabilities,
                                     VkExtent2D                     & size_of_images ) {
@@ -439,36 +218,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 02 Image Presentation
-// Recipe:  09 Selecting desired usage scenarios of swapchain images
-
-namespace VulkanCookbook {
 
   bool SelectDesiredUsageScenariosOfSwapchainImages( VkSurfaceCapabilitiesKHR const & surface_capabilities,
                                                      VkImageUsageFlags                desired_usages,
@@ -477,37 +226,6 @@ namespace VulkanCookbook {
 
     return desired_usages == image_usage;
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 02 Image Presentation
-// Recipe:  10 Selecting a transformation of swapchain images
-
-namespace VulkanCookbook {
 
   bool SelectTransformationOfSwapchainImages( VkSurfaceCapabilitiesKHR const & surface_capabilities,
                                               VkSurfaceTransformFlagBitsKHR    desired_transform,
@@ -519,38 +237,6 @@ namespace VulkanCookbook {
     }
     return true;
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 02 Image Presentation
-// Recipe:  11 Selecting a format of swapchain images
-
-
-namespace VulkanCookbook {
 
   bool SelectFormatOfSwapchainImages( VkPhysicalDevice     physical_device,
                                       VkSurfaceKHR         presentation_surface,
@@ -608,38 +294,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 02 Image Presentation
-// Recipe:  12 Creating a swapchain
-
-
-namespace VulkanCookbook {
-
   bool CreateSwapchain( VkDevice                        logical_device,
                         VkSurfaceKHR                    presentation_surface,
                         uint32_t                        image_count,
@@ -686,37 +340,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 02 Image Presentation
-// Recipe:  13 Getting handles of swapchain images
-
-namespace VulkanCookbook {
-
   bool GetHandlesOfSwapchainImages( VkDevice               logical_device,
                                     VkSwapchainKHR         swapchain,
                                     std::vector<VkImage> & swapchain_images ) {
@@ -740,37 +363,6 @@ namespace VulkanCookbook {
 
     return true;
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 02 Image Presentation
-// Recipe:  14 Creating a swapchain with R8G8B8A8 format and a MAILBOX present mode
-
-namespace VulkanCookbook {
 
   bool CreateSwapchainWithR8G8B8A8FormatAndMailboxPresentMode( VkPhysicalDevice       physical_device,
                                                                VkSurfaceKHR           presentation_surface,
@@ -827,38 +419,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 02 Image Presentation
-// Recipe:  15 Acquiring a swapchain image
-
-
-namespace VulkanCookbook {
-
   bool AcquireSwapchainImage( VkDevice         logical_device,
                               VkSwapchainKHR   swapchain,
                               VkSemaphore      semaphore,
@@ -875,38 +435,6 @@ namespace VulkanCookbook {
       return false;
     }
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 02 Image Presentation
-// Recipe:  16 Presenting an image
-
-
-namespace VulkanCookbook {
 
   bool PresentImage( VkQueue                  queue,
                      std::vector<VkSemaphore> rendering_semaphores,
@@ -940,37 +468,6 @@ namespace VulkanCookbook {
     }
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 02 Image Presentation
-// Recipe:  17 Destroying a swapchain
-
-namespace VulkanCookbook {
-
   void DestroySwapchain( VkDevice         logical_device,
                          VkSwapchainKHR & swapchain ) {
     if( swapchain ) {
@@ -978,38 +475,6 @@ namespace VulkanCookbook {
       swapchain = VK_NULL_HANDLE;
     }
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 02 Image Presentation
-// Recipe:  18 Destroying a presentation surface
-
-
-namespace VulkanCookbook {
 
   void DestroyPresentationSurface( VkInstance     instance,
                                    VkSurfaceKHR & presentation_surface ) {
