@@ -27,6 +27,7 @@
 // Recipe:  01 Creating a buffer
 
 #include "Chapter4Functions.h"
+#include "Chapter3Functions.h"
 
 namespace VulkanCookbook {
 
@@ -52,37 +53,6 @@ namespace VulkanCookbook {
     }
     return true;
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  02 Allocating and binding memory object to a buffer
-
-namespace VulkanCookbook {
 
   bool AllocateAndBindMemoryObjectToBuffer( VkPhysicalDevice           physical_device,
                                             VkDevice                   logical_device,
@@ -127,36 +97,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  03 Setting a buffer memory barrier
-namespace VulkanCookbook {
-
   void SetBufferMemoryBarrier( VkCommandBuffer               command_buffer,
                                VkPipelineStageFlags          generating_stages,
                                VkPipelineStageFlags          consuming_stages,
@@ -183,38 +123,6 @@ namespace VulkanCookbook {
     }
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  04 Creating a buffer view
-
-
-namespace VulkanCookbook {
-
   bool CreateBufferView( VkDevice       logical_device,
                          VkBuffer       buffer,
                          VkFormat       format,
@@ -238,38 +146,6 @@ namespace VulkanCookbook {
     }
     return true;
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  05 Creating an image
-
-
-namespace VulkanCookbook {
 
   bool CreateImage( VkDevice                logical_device,
                     VkImageType             type,
@@ -306,38 +182,6 @@ namespace VulkanCookbook {
     }
     return true;
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  06 Allocating and binding memory object to an image
-
-
-namespace VulkanCookbook {
 
   bool AllocateAndBindMemoryObjectToImage( VkPhysicalDevice           physical_device,
                                            VkDevice                   logical_device,
@@ -382,38 +226,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  07 Setting an image memory barrier
-
-
-namespace VulkanCookbook {
-
   void SetImageMemoryBarrier( VkCommandBuffer              command_buffer,
                               VkPipelineStageFlags         generating_stages,
                               VkPipelineStageFlags         consuming_stages,
@@ -445,38 +257,6 @@ namespace VulkanCookbook {
       vkCmdPipelineBarrier( command_buffer, generating_stages, consuming_stages, 0, 0, nullptr, 0, nullptr, static_cast<uint32_t>(image_memory_barriers.size()), image_memory_barriers.data() );
     }
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  08 Creating an image view
-
-
-namespace VulkanCookbook {
 
   bool CreateImageView( VkDevice             logical_device,
                         VkImage              image,
@@ -514,38 +294,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  09 Creating a 2D image and view
-
-
-namespace VulkanCookbook {
-
   bool Create2DImageAndView( VkPhysicalDevice        physical_device,
                              VkDevice                logical_device,
                              VkFormat                format,
@@ -573,38 +321,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  10 Creating a layered 2D image with a CUBEMAP view
-
-
-namespace VulkanCookbook {
-
   bool CreateLayered2DImageWithCubemapView( VkPhysicalDevice    physical_device,
                                             VkDevice            logical_device,
                                             uint32_t            size,
@@ -628,38 +344,6 @@ namespace VulkanCookbook {
 
     return true;
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  11 Mapping, updating and unmapping host-visible memory
-
-
-namespace VulkanCookbook {
 
   bool MapUpdateAndUnmapHostVisibleMemory( VkDevice             logical_device,
                                            VkDeviceMemory       memory_object,
@@ -703,38 +387,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  12 Copying data between buffers
-
-
-namespace VulkanCookbook {
-
   void CopyDataBetweenBuffers( VkCommandBuffer           command_buffer,
                                VkBuffer                  source_buffer,
                                VkBuffer                  destination_buffer,
@@ -743,38 +395,6 @@ namespace VulkanCookbook {
       vkCmdCopyBuffer( command_buffer, source_buffer, destination_buffer, static_cast<uint32_t>(regions.size()), regions.data() );
     }
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  13 Copying data from a buffer to an image
-
-
-namespace VulkanCookbook {
 
   void CopyDataFromBufferToImage( VkCommandBuffer                command_buffer,
                                   VkBuffer                       source_buffer,
@@ -786,38 +406,6 @@ namespace VulkanCookbook {
     }
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  14 Copying data from an image to a buffer
-
-
-namespace VulkanCookbook {
-
   void CopyDataFromImageToBuffer( VkCommandBuffer                command_buffer,
                                   VkImage                        source_image,
                                   VkImageLayout                  image_layout,
@@ -827,39 +415,6 @@ namespace VulkanCookbook {
       vkCmdCopyImageToBuffer( command_buffer, source_image, image_layout, destination_buffer, static_cast<uint32_t>(regions.size()), regions.data() );
     }
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  15 Using staging buffer to update buffer with a device-local memory bound
-
-#include "Chapter3Functions.h"
-
-namespace VulkanCookbook {
 
   bool UseStagingBufferToUpdateBufferWithDeviceLocalMemoryBound( VkPhysicalDevice           physical_device,
                                                                  VkDevice                   logical_device,
@@ -921,56 +476,25 @@ namespace VulkanCookbook {
 
     return true;
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  16 Using staging buffer to update an image with a device-local memory bound
-
-
-namespace VulkanCookbook {
-  bool UseStagingBufferToUpdateImageWithDeviceLocalMemoryBound( VkPhysicalDevice           physical_device,
-                                                                VkDevice                   logical_device,
-                                                                VkDeviceSize               data_size,
-                                                                void                     * data,
-                                                                VkImage                    destination_image,
-                                                                VkImageSubresourceLayers   destination_image_subresource,
-                                                                VkOffset3D                 destination_image_offset,
-                                                                VkExtent3D                 destination_image_size,
-                                                                VkImageLayout              destination_image_current_layout,
-                                                                VkImageLayout              destination_image_new_layout,
-                                                                VkAccessFlags              destination_image_current_access,
-                                                                VkAccessFlags              destination_image_new_access,
-                                                                VkImageAspectFlags         destination_image_aspect,
-                                                                VkPipelineStageFlags       destination_image_generating_stages,
-                                                                VkPipelineStageFlags       destination_image_consuming_stages,
-                                                                VkQueue                    queue,
-                                                                VkCommandBuffer            command_buffer,
-                                                                std::vector<VkSemaphore>   signal_semaphores ) {
+  bool UseStagingBufferToUpdateImageWithDeviceLocalMemoryBound(
+		  VkPhysicalDevice           physical_device,
+VkDevice                   logical_device,
+VkDeviceSize               data_size,
+void                     * data,
+VkImage                    destination_image,
+VkImageSubresourceLayers   destination_image_subresource,
+VkOffset3D                 destination_image_offset,
+VkExtent3D                 destination_image_size,
+VkImageLayout              destination_image_current_layout,
+VkImageLayout              destination_image_new_layout,
+VkAccessFlags              destination_image_current_access,
+VkAccessFlags              destination_image_new_access,
+VkImageAspectFlags         destination_image_aspect,
+VkPipelineStageFlags       destination_image_generating_stages,
+VkPipelineStageFlags       destination_image_consuming_stages,
+VkQueue                    queue,
+VkCommandBuffer            command_buffer,
+std::vector<VkSemaphore>   signal_semaphores ) {
 
     VkDestroyer(VkBuffer) staging_buffer;
     InitVkDestroyer( logical_device, staging_buffer );
@@ -1050,38 +574,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  17 Destroying an image view
-
-
-namespace VulkanCookbook {
-
   void DestroyImageView( VkDevice      logical_device,
                          VkImageView & image_view ) {
     if( VK_NULL_HANDLE != image_view ) {
@@ -1089,38 +581,6 @@ namespace VulkanCookbook {
       image_view = VK_NULL_HANDLE;
     }
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  18 Destroying an image
-
-
-namespace VulkanCookbook {
 
   void DestroyImage( VkDevice   logical_device,
                      VkImage  & image ) {
@@ -1130,38 +590,6 @@ namespace VulkanCookbook {
     }
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  19 Destroying a buffer view
-
-
-namespace VulkanCookbook {
-
   void DestroyBufferView( VkDevice       logical_device,
                           VkBufferView & buffer_view ) {
     if( VK_NULL_HANDLE != buffer_view ) {
@@ -1170,38 +598,6 @@ namespace VulkanCookbook {
     }
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  20 Freeing a memory object
-
-
-namespace VulkanCookbook {
-
   void FreeMemoryObject( VkDevice         logical_device,
                          VkDeviceMemory & memory_object ) {
     if( VK_NULL_HANDLE != memory_object ) {
@@ -1209,38 +605,6 @@ namespace VulkanCookbook {
       memory_object = VK_NULL_HANDLE;
     }
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 04 Resources and Memory
-// Recipe:  21 Destroying a buffer
-
-
-namespace VulkanCookbook {
 
   void DestroyBuffer( VkDevice   logical_device,
                       VkBuffer & buffer ) {

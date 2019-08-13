@@ -667,7 +667,7 @@ class Sample : public VulkanCookbookSample {
       *Swapchain.Handle, Swapchain.Size, Swapchain.ImageViewsRaw, *RenderPass, { wait_semaphore_info }, prepare_frame, FramesResources );
   }
 
-  void OnMouseEvent() {
+  void OnMouseEvent() override{
     UpdateStagingBuffer( false );
   }
 

@@ -49,37 +49,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 03 Command Buffers and Synchronization
-// Recipe:  02 Allocating command buffers
-
-namespace VulkanCookbook {
-
   bool AllocateCommandBuffers( VkDevice                       logical_device,
                                VkCommandPool                  command_pool,
                                VkCommandBufferLevel           level,
@@ -103,37 +72,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 03 Command Buffers and Synchronization
-// Recipe:  03 Beginning a command buffer recording operation
-
-namespace VulkanCookbook {
-
   bool BeginCommandBufferRecordingOperation( VkCommandBuffer                  command_buffer,
                                              VkCommandBufferUsageFlags        usage,
                                              VkCommandBufferInheritanceInfo * secondary_command_buffer_info ) {
@@ -152,37 +90,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 03 Command Buffers and Synchronization
-// Recipe:  04 Ending a command buffer recording operation
-
-namespace VulkanCookbook {
-
   bool EndCommandBufferRecordingOperation( VkCommandBuffer command_buffer ) {
     VkResult result = vkEndCommandBuffer( command_buffer );
     if( VK_SUCCESS != result ) {
@@ -191,38 +98,6 @@ namespace VulkanCookbook {
     }
     return true;
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 03 Command Buffers and Synchronization
-// Recipe:  05 Resetting a command buffer
-
-
-namespace VulkanCookbook {
 
   bool ResetCommandBuffer( VkCommandBuffer command_buffer,
                            bool            release_resources ) {
@@ -234,37 +109,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 03 Command Buffers and Synchronization
-// Recipe:  06 Resetting a command pool
-
-namespace VulkanCookbook {
-
   bool ResetCommandPool( VkDevice      logical_device,
                          VkCommandPool command_pool,
                          bool          release_resources ) {
@@ -275,37 +119,6 @@ namespace VulkanCookbook {
     }
     return true;
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 03 Command Buffers and Synchronization
-// Recipe:  07 Creating a semaphore
-
-namespace VulkanCookbook {
 
   bool CreateSemaphore( VkDevice      logical_device,
                         VkSemaphore & semaphore ) {
@@ -322,37 +135,6 @@ namespace VulkanCookbook {
     }
     return true;
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 03 Command Buffers and Synchronization
-// Recipe:  08 Creating a fence
-
-namespace VulkanCookbook {
 
   bool CreateFence( VkDevice   logical_device,
                     bool       signaled,
@@ -371,10 +153,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-}
-
-namespace VulkanCookbook {
-
   bool WaitForFences( VkDevice                     logical_device,
                       std::vector<VkFence> const & fences,
                       VkBool32                     wait_for_all,
@@ -390,11 +168,6 @@ namespace VulkanCookbook {
     return false;
   }
 
-}
-
-
-namespace VulkanCookbook {
-
   bool ResetFences( VkDevice                     logical_device,
                     std::vector<VkFence> const & fences ) {
     if( fences.size() > 0 ) {
@@ -407,38 +180,6 @@ namespace VulkanCookbook {
     }
     return false;
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 03 Command Buffers and Synchronization
-// Recipe:  11 Submitting command buffers to the queue
-
-
-namespace VulkanCookbook {
 
   bool SubmitCommandBuffersToQueue( VkQueue                         queue,
                                     std::vector<WaitSemaphoreInfo>  wait_semaphore_infos,
@@ -473,38 +214,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 03 Command Buffers and Synchronization
-// Recipe:  12 Synchronizing two command buffers
-
-
-namespace VulkanCookbook {
-
   bool SynchronizeTwoCommandBuffers( VkQueue                         first_queue,
                                      std::vector<WaitSemaphoreInfo>  first_wait_semaphore_infos,
                                      std::vector<VkCommandBuffer>    first_command_buffers,
@@ -527,86 +236,21 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 03 Command Buffers and Synchronization
-// Recipe:  13 Checking if processing of a submitted command buffer has finished
-
-
-
-namespace VulkanCookbook {
-
-  bool CheckIfProcessingOfSubmittedCommandBufferHasFinished( VkDevice                         logical_device,
-                                                             VkQueue                          queue,
-                                                             std::vector<WaitSemaphoreInfo>   wait_semaphore_infos,
-                                                             std::vector<VkCommandBuffer>     command_buffers,
-                                                             std::vector<VkSemaphore>         signal_semaphores,
-                                                             VkFence                          fence,
-                                                             uint64_t                         timeout,
-                                                             VkResult                       & wait_status ) {
+  bool CheckIfProcessingOfSubmittedCommandBufferHasFinished(
+		  VkDevice                         logical_device,
+     VkQueue                          queue,
+     std::vector<WaitSemaphoreInfo>   wait_semaphore_infos,
+     std::vector<VkCommandBuffer>     command_buffers,
+     std::vector<VkSemaphore>         signal_semaphores,
+     VkFence                          fence,
+     uint64_t                         timeout,
+     VkResult                       & wait_status ) {
     if( !SubmitCommandBuffersToQueue( queue, wait_semaphore_infos, command_buffers, signal_semaphores, fence ) ) {
       return false;
     }
 
     return WaitForFences( logical_device, { fence }, VK_FALSE, timeout );
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 03 Command Buffers and Synchronization
-// Recipe:  14 Waiting until all commands submitted to a queue are finished
-
-
-
-namespace VulkanCookbook {
 
   bool WaitUntilAllCommandsSubmittedToQueueAreFinished( VkQueue queue ) {
     VkResult result = vkQueueWaitIdle( queue );
@@ -617,38 +261,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 03 Command Buffers and Synchronization
-// Recipe:  15 Waiting for all submitted commands to be finished
-
-
-namespace VulkanCookbook {
-
   bool WaitForAllSubmittedCommandsToBeFinished( VkDevice logical_device ) {
     VkResult result = vkDeviceWaitIdle( logical_device );
     if( VK_SUCCESS != result ) {
@@ -658,38 +270,6 @@ namespace VulkanCookbook {
     return true;
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 03 Command Buffers and Synchronization
-// Recipe:  16 Destroying a fence
-
-
-namespace VulkanCookbook {
-
   void DestroyFence( VkDevice   logical_device,
                      VkFence  & fence ) {
     if( VK_NULL_HANDLE != fence ) {
@@ -697,38 +277,6 @@ namespace VulkanCookbook {
       fence = VK_NULL_HANDLE;
     }
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 03 Command Buffers and Synchronization
-// Recipe:  17 Destroying a semaphore
-
-
-namespace VulkanCookbook {
 
   void DestroySemaphore( VkDevice      logical_device,
                          VkSemaphore & semaphore ) {
@@ -738,38 +286,6 @@ namespace VulkanCookbook {
     }
   }
 
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 03 Command Buffers and Synchronization
-// Recipe:  18 Freeing command buffers
-
-
-namespace VulkanCookbook {
-
   void FreeCommandBuffers( VkDevice                       logical_device,
                            VkCommandPool                  command_pool,
                            std::vector<VkCommandBuffer> & command_buffers ) {
@@ -778,37 +294,6 @@ namespace VulkanCookbook {
       command_buffers.clear();
     }
   }
-
-} // namespace VulkanCookbook
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and / or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The below copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-// Vulkan Cookbook
-// ISBN: 9781786468154
-// © Packt Publishing Limited
-//
-// Author:   Pawel Lapinski
-// LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
-//
-// Chapter: 03 Command Buffers and Synchronization
-// Recipe:  19 Destroying a command pool
-
-namespace VulkanCookbook {
 
   void DestroyCommandPool( VkDevice        logical_device,
                            VkCommandPool & command_pool ) {

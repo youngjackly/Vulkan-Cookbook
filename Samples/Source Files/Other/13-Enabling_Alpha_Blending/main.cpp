@@ -224,7 +224,7 @@ class Sample : public VulkanCookbookSample {
       *Swapchain.Handle, Swapchain.Size, Swapchain.ImageViewsRaw, *RenderPass, {}, prepare_frame, FramesResources );
   }
 
-  void OnMouseEvent() {
+  void OnMouseEvent() override{
     if( MouseState.Buttons[0].WasClicked ) {
       static bool enable_blending = false;
       CreatePipelineObject( enable_blending );
