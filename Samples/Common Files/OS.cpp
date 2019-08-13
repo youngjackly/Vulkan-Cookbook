@@ -22,7 +22,7 @@
 //
 // Vulkan Cookbook
 // ISBN: 9781786468154
-// © Packt Publishing Limited
+// Â© Packt Publishing Limited
 //
 // Author:   Pawel Lapinski
 // LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
@@ -120,47 +120,49 @@ WindowFramework::~WindowFramework() {
 }
 
 void WindowFramework::Render() {
-  if( Created &&
-	  Sample.Initialize( WindowParams ) ) {
+	if( Created && Sample.Initialize( WindowParams ) )
+	{
 
+		bool loop = true;
 
-	  xcb_generic_event_t *e;
-	  while ((e = xcb_wait_for_event (WindowParams.Connection))) {
-		switch (e->response_type & ~0x80) {
+		xcb_generic_event_t *e  = nullptr;
 
-		case XCB_BUTTON_PRESS: {
-		  xcb_button_press_event_t *ev = (xcb_button_press_event_t *)e;
-		  xcb_flush (WindowParams.Connection);
-		  break;
+		while( (e = xcb_wait_for_event(WindowParams.Connection)) ) {
+
+			switch( e->response_type & ~0x80 ) {
+			case XCB_BUTTON_PRESS:
+			{
+				xcb_button_press_event_t* be = (xcb_button_press_event_t*)e;
+				Sample.MouseClick( 0, be->state );
+			}
+				break;
+				//	  case USER_MESSAGE_MOUSE_MOVE:
+				//		Sample.MouseMove( static_cast<int>(message.wParam), static_cast<int>(message.lParam) );
+				//		break;
+				//	  case USER_MESSAGE_MOUSE_WHEEL:
+				//		Sample.MouseWheel( static_cast<short>(message.wParam) * 0.002f );
+				//		break;
+				//	  case USER_MESSAGE_RESIZE:
+				//		if( !Sample.Resize() ) {
+				//		  loop = false;
+				//		}
+				//		break;
+				//	  case USER_MESSAGE_QUIT:
+				//		loop = false;
+				//		break;
+			default:
+				break;
+			}
+			free(e);
+
+			if( Sample.IsReady() ) {
+				Sample.UpdateTime();
+				Sample.Draw();
+				Sample.MouseReset();
+			}
 		}
-
-		case XCB_BUTTON_RELEASE: {
-		  xcb_button_release_event_t *ev = (xcb_button_release_event_t *)e;
-
-
-		  xcb_flush (WindowParams.Connection);
-		  break;
-		}
-		case XCB_EXPOSE: {
-
-		  xcb_flush(WindowParams.Connection);
-		  break;
-		}
-		default: {
-		  break;
-		}
-		}
-		free (e);
-
-		if( Sample.IsReady() ) {
-		  Sample.UpdateTime();
-		  Sample.Draw();
-		  Sample.MouseReset();
-		}
-	  }
-  }
-
-  Sample.Deinitialize();
+	}
+	Sample.Deinitialize();
 }
 
 #endif

@@ -30,6 +30,7 @@
 // 01-Creating_Logical_Device
 
 #include "CookbookSampleFramework.h"
+#include "FunctionWrapper.h"
 
 using namespace VulkanCookbook;
 

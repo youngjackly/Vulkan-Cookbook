@@ -22,7 +22,7 @@
 //
 // Vulkan Cookbook
 // ISBN: 9781786468154
-// © Packt Publishing Limited
+// Â© Packt Publishing Limited
 //
 // Author:   Pawel Lapinski
 // LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
@@ -30,7 +30,7 @@
 // Orbiting Camera
 
 #include "OrbitingCamera.h"
-#include "10 Helper Recipes/02 Preparing a rotation matrix.h"
+#include "Chapter10Functions.h"
 
 namespace VulkanCookbook {
 
