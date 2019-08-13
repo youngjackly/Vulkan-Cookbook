@@ -31,7 +31,139 @@
 
 #include "CookbookSampleFramework.h"
 
+
+/* graphics contexts */
+xcb_gcontext_t       foreground;
+xcb_gcontext_t       fill;
+xcb_drawable_t       pid;
+
 namespace VulkanCookbook {
+
+#ifdef VK_USE_PLATFORM_XCB_KHR
+
+WindowFramework::WindowFramework( const char               * window_title,
+								  int                        x,
+								  int                        y,
+								  int                        width,
+								  int                        height,
+								  VulkanCookbookSampleBase & sample ) :
+  WindowParams(),
+  Sample( sample ),
+  Created( false ) {
+
+	/* Open the connection to the X server */
+
+	xcb_connection_t    *c = xcb_connect (nullptr, nullptr);
+
+	/* Get the first screen */
+	xcb_screen_t *screen = xcb_setup_roots_iterator (xcb_get_setup (c)).data;
+
+	uint32_t             mask = 0;
+	uint32_t             values[2];
+
+
+	/* black foreground graphic context */
+	foreground = xcb_generate_id (c);
+	mask = XCB_GC_FOREGROUND | XCB_GC_GRAPHICS_EXPOSURES;
+	values[0] = screen->black_pixel;
+	values[1] = 0;
+	xcb_create_gc (c, foreground, screen->root, mask, values);
+
+	/* make the background pixmap for the window */
+	pid = xcb_generate_id (c);
+	xcb_create_pixmap(c,
+			  screen->root_depth,
+			  pid,
+			  screen->root,
+			  500, 500);
+
+	/* context for filling with white */
+	fill = xcb_generate_id(c);
+	mask = XCB_GC_FOREGROUND | XCB_GC_BACKGROUND;
+	values[0] = screen->white_pixel;
+	values[1] = screen->white_pixel;
+	xcb_create_gc(c, fill, pid, mask,values);
+
+	/* Create the window */
+	xcb_window_t win = xcb_generate_id(c);
+	mask = XCB_CW_BACK_PIXMAP  | XCB_CW_EVENT_MASK;
+	values[0] = pid;
+	values[1] = XCB_EVENT_MASK_EXPOSURE       | XCB_EVENT_MASK_BUTTON_PRESS   |
+				XCB_EVENT_MASK_BUTTON_RELEASE | XCB_EVENT_MASK_BUTTON_MOTION |
+				XCB_EVENT_MASK_KEY_PRESS      | XCB_EVENT_MASK_KEY_RELEASE;
+	xcb_create_window (c,                             /* Connection          */
+			   screen->root_depth,          /* depth               */
+					   win,                           /* window Id           */
+					   screen->root,                  /* parent window       */
+					   x, y,                          /* x, y                */
+					   width, height,                      /* width, height       */
+					   10,                            /* border_width        */
+					   XCB_WINDOW_CLASS_INPUT_OUTPUT, /* class               */
+					   screen->root_visual,           /* visual              */
+					   mask, values);                 /* masks */
+
+	/* Map the window on the screen */
+	xcb_map_window (c, win);
+
+	/* fill the pixmap with white (it starts empty) */
+	xcb_poly_fill_rectangle(c, pid, fill, 1, (xcb_rectangle_t[]){{ 0, 0, 500, 500}});
+
+	xcb_flush(c);
+
+	WindowParams.Connection = c;
+	WindowParams.Window = win;
+  Created = true;
+}
+
+WindowFramework::~WindowFramework() {
+
+}
+
+void WindowFramework::Render() {
+  if( Created &&
+	  Sample.Initialize( WindowParams ) ) {
+
+
+	  xcb_generic_event_t *e;
+	  while ((e = xcb_wait_for_event (WindowParams.Connection))) {
+		switch (e->response_type & ~0x80) {
+
+		case XCB_BUTTON_PRESS: {
+		  xcb_button_press_event_t *ev = (xcb_button_press_event_t *)e;
+		  xcb_flush (WindowParams.Connection);
+		  break;
+		}
+
+		case XCB_BUTTON_RELEASE: {
+		  xcb_button_release_event_t *ev = (xcb_button_release_event_t *)e;
+
+
+		  xcb_flush (WindowParams.Connection);
+		  break;
+		}
+		case XCB_EXPOSE: {
+
+		  xcb_flush(WindowParams.Connection);
+		  break;
+		}
+		default: {
+		  break;
+		}
+		}
+		free (e);
+
+		if( Sample.IsReady() ) {
+		  Sample.UpdateTime();
+		  Sample.Draw();
+		  Sample.MouseReset();
+		}
+	  }
+  }
+
+  Sample.Deinitialize();
+}
+
+#endif
 
 #ifdef VK_USE_PLATFORM_WIN32_KHR
 
