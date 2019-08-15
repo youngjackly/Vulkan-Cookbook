@@ -25,6 +25,10 @@
 //
 // Chapter: 01 Instance and Devices
 // Recipe:  05 Loading function exported from a Vulkan Loader library
+#ifdef VK_USE_PLATFORM_GLFW_KHR
+#define GLFW_INCLUDE_VULKAN
+#include <GLFW/glfw3.h>
+#endif
 
 #include "FunctionLoader.h"
 
@@ -34,13 +38,19 @@ bool ConnectWithVulkanLoaderLibrary( LIBRARY_TYPE & vulkan_library ) {
 #if defined _WIN32
   vulkan_library = LoadLibrary( "vulkan-1.dll" );
 #elif defined __linux
+#ifndef VK_USE_PLATFORM_GLFW_KHR
   vulkan_library = dlopen( "libvulkan.so.1", RTLD_NOW );
 #endif
+#endif
 
+#ifdef VK_USE_PLATFORM_GLFW_KHR
+  return true;
+#else
   if( vulkan_library == nullptr ) {
 	std::cout << "Could not connect with a Vulkan Runtime library." << std::endl;
 	return false;
   }
+#endif
   return true;
 }
 
@@ -52,6 +62,7 @@ bool LoadFunctionExportedFromVulkanLoaderLibrary( LIBRARY_TYPE const & vulkan_li
   #define LoadFunction dlsym
 #endif
 
+#ifndef VK_USE_PLATFORM_GLFW_KHR
 #define EXPORTED_VULKAN_FUNCTION( name )                              \
     name = (PFN_##name)LoadFunction( vulkan_library, #name );         \
     if( name == nullptr ) {                                           \
@@ -59,6 +70,16 @@ bool LoadFunctionExportedFromVulkanLoaderLibrary( LIBRARY_TYPE const & vulkan_li
         #name << std::endl;                                           \
       return false;                                                   \
     }
+#else
+
+#define EXPORTED_VULKAN_FUNCTION( name )                              \
+	name = (PFN_##name) glfwGetInstanceProcAddress(nullptr, #name); \
+	if( name == nullptr ) {                                           \
+      std::cout << "Could not load exported Vulkan function named: "  \
+        #name << std::endl;                                           \
+		return false;                                                   \
+	}
+#endif
 
 #include "ListOfVulkanFunctions.inl"
 

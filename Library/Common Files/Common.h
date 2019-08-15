@@ -38,6 +38,10 @@
 #include <dlfcn.h>
 #endif
 
+#ifdef VK_USE_PLATFORM_GLFW_KHR
+typedef struct GLFWwindow GLFWwindow;
+#endif
+
 #include <iostream>
 #include <vector>
 #include <array>
@@ -74,7 +78,8 @@ namespace VulkanCookbook {
 
     xcb_connection_t * Connection;
     xcb_window_t       Window;
-
+#elif defined VK_USE_PLATFORM_GLFW_KHR
+	  GLFWwindow* window;
 #endif
   };
 

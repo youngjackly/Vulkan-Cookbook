@@ -25,9 +25,13 @@
 //
 // Chapter: 02 Image Presentation
 // Recipe:  01 Creating a Vulkan Instance with WSI extensions enabled
+#define GLFW_INCLUDE_VULKAN
+#include "GLFW/glfw3.h"
 
 #include "FunctionWrapper.h"
 #include "Chapter2Functions.h"
+
+
 
 namespace VulkanCookbook {
 
@@ -43,7 +47,10 @@ namespace VulkanCookbook {
       VK_KHR_XCB_SURFACE_EXTENSION_NAME
 
 #elif defined VK_USE_PLATFORM_XLIB_KHR
+
       VK_KHR_XLIB_SURFACE_EXTENSION_NAME
+#elif defined VK_USE_PLATFORM_GLFW_KHR
+		"VK_KHR_xcb_surface"
 #endif
     );
 
@@ -90,7 +97,8 @@ namespace VulkanCookbook {
     };
 
     result = vkCreateXcbSurfaceKHR( instance, &surface_create_info, nullptr, &presentation_surface );
-
+#elif defined VK_USE_PLATFORM_GLFW_KHR
+	result = glfwCreateWindowSurface(instance, window_parameters.window, nullptr, &presentation_surface);
 #endif
 
     if( (VK_SUCCESS != result) ||

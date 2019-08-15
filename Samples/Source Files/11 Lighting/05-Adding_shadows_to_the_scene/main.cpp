@@ -694,7 +694,7 @@ class Sample : public VulkanCookbookSample {
       return true;
     };
 
-    WaitForAllSubmittedCommandsToBeFinished( *LogicalDevice );
+	WaitForAllSubmittedCommandsToBeFinished( *LogicalDevice );
 
     return IncreasePerformanceThroughIncreasingTheNumberOfSeparatelyRenderedFrames( *LogicalDevice, GraphicsQueue.Handle, PresentQueue.Handle,
       *Swapchain.Handle, Swapchain.Size, Swapchain.ImageViewsRaw, *SceneRenderPass, {}, prepare_frame, FramesResources );
