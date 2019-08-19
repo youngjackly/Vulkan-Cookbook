@@ -22,7 +22,7 @@
 //
 // Vulkan Cookbook
 // ISBN: 9781786468154
-// © Packt Publishing Limited
+// Â© Packt Publishing Limited
 //
 // Author:   Pawel Lapinski
 // LinkedIn: https://www.linkedin.com/in/pawel-lapinski-84522329
@@ -60,12 +60,18 @@ class Sample : public VulkanCookbookSample {
   VkDestroyer(VkPipelineLayout)       PipelineLayout;
   VkDestroyer(VkPipeline)             Pipeline;
 
-  static const VkFormat DepthFormat = VK_FORMAT_D16_UNORM;
+  static const VkFormat DepthFormat = VK_FORMAT_D24_UNORM_S8_UINT;
 
   virtual bool Initialize( WindowParameters window_parameters ) override {
     if( !InitializeVulkan( window_parameters, nullptr, VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT, false ) ) {
       return false;
     }
+
+	if(!CreateDepthImagesAndViews())
+	{
+		printf("create depth image and views failed\n");
+		return false;
+	}
 
     // Command buffers creation
     InitVkDestroyer( LogicalDevice, CommandPool );
@@ -410,8 +416,12 @@ class Sample : public VulkanCookbookSample {
       return false;
     }
 
+	std::vector<VkImageView> imagViews;
+	imagViews.push_back(*Swapchain.ImageViews[image_index]);
+	imagViews.push_back(*DepthAttachmentView);
+
     InitVkDestroyer( LogicalDevice, Framebuffer );
-    if( !CreateFramebuffer( *LogicalDevice, *RenderPass, { *Swapchain.ImageViews[image_index], *DepthAttachmentView }, Swapchain.Size.width, Swapchain.Size.height, 1, *Framebuffer ) ) {
+    if( !CreateFramebuffer( *LogicalDevice, *RenderPass, imagViews, Swapchain.Size.width, Swapchain.Size.height, 1, *Framebuffer ) ) {
       return false;
     }
 

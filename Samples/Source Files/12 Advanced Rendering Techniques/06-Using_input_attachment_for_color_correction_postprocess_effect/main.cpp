@@ -779,6 +779,8 @@ std::vector<VkSubpassDependency> subpass_dependencies = {
     InitVkDestroyer( LogicalDevice, PostprocessPipeline );
     *PostprocessPipeline = postprocess_pipeline[0];
 
+	if(!createColorAttatchmentAndview()) return false;
+
     return true;
   }
 
@@ -998,15 +1000,10 @@ std::vector<VkSubpassDependency> subpass_dependencies = {
     return true;
   }
 
-  virtual bool Resize() override {
-    if( !CreateSwapchain() ) {
-      return false;
-    }
 
-    if( IsReady() ) {
-      // Scene image (color attachment in 1st subpass, input attachment in 2nd subpass
-
-      InitVkDestroyer( LogicalDevice, SceneImage );
+  bool createColorAttatchmentAndview()
+  {
+	  InitVkDestroyer( LogicalDevice, SceneImage );
       InitVkDestroyer( LogicalDevice, SceneImageMemory );
       InitVkDestroyer( LogicalDevice, SceneImageView );
       if( !CreateInputAttachment( PhysicalDevice, *LogicalDevice, VK_IMAGE_TYPE_2D, Swapchain.Format, { Swapchain.Size.width,
@@ -1036,6 +1033,18 @@ std::vector<VkSubpassDependency> subpass_dependencies = {
       if( !UpdateStagingBuffer( true ) ) {
         return false;
       }
+	  return true;
+  }
+
+  virtual bool Resize() override {
+    if( !CreateSwapchain() ) {
+      return false;
+    }
+
+    if( IsReady() ) {
+      // Scene image (color attachment in 1st subpass, input attachment in 2nd subpass
+		if(!createColorAttatchmentAndview())
+			return false;
     }
     return true;
   }

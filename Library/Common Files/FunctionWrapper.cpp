@@ -41,6 +41,23 @@ VkInstance                      & instance ) {
 		}
 	}
 
+	uint32_t layerCout = 0;
+
+	vkEnumerateInstanceLayerProperties(&layerCout, nullptr);
+
+	std::vector<VkLayerProperties> layerProperty;
+	if(layerCout > 0)
+	{
+		layerProperty.resize(layerCout);
+		vkEnumerateInstanceLayerProperties(&layerCout, &layerProperty[0]);
+	}
+
+	char** layerlanmes = new char*[layerCout];
+	for(int i = 0; i < layerCout; ++i)
+	{
+		layerlanmes[i] = layerProperty[i].layerName;
+	}
+
 	VkApplicationInfo application_info = {
 	VK_STRUCTURE_TYPE_APPLICATION_INFO,                 // VkStructureType           sType
 	nullptr,                                            // const void              * pNext
@@ -56,8 +73,8 @@ VkInstance                      & instance ) {
 	nullptr,                                            // const void              * pNext
 	0,                                                  // VkInstanceCreateFlags     flags
 	&application_info,                                  // const VkApplicationInfo * pApplicationInfo
-	0,                                                  // uint32_t                  enabledLayerCount
-	nullptr,                                            // const char * const      * ppEnabledLayerNames
+	layerCout,                                                  // uint32_t                  enabledLayerCount
+	layerCout > 0 ? layerlanmes : nullptr,                                            // const char * const      * ppEnabledLayerNames
 	static_cast<uint32_t>(desired_extensions.size()),   // uint32_t                  enabledExtensionCount
 	desired_extensions.data()                           // const char * const      * ppEnabledExtensionNames
 	};
@@ -68,6 +85,8 @@ VkInstance                      & instance ) {
 		std::cout << "Could not create Vulkan instance." << std::endl;
 		return false;
 	}
+
+	delete [] layerlanmes;
 
 	return true;
 }

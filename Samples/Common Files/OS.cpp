@@ -118,13 +118,14 @@ void WindowFramework::Render() {
 	{
 		typedef std::chrono::system_clock::time_point tp;
 		typedef std::chrono::microseconds mms;
-		tp cur;
+		tp start;
 		long spare;
 		long dur;
-		tp lasttime = std::chrono::system_clock::now();
+		tp end;
 		double frameRate = 60.;
 		while (!glfwWindowShouldClose(WindowParams.window))
 		{
+			start = std::chrono::system_clock::now();
 			glfwPollEvents();
 			if( Sample.IsReady() ) {
 				Sample.UpdateTime();
@@ -132,16 +133,18 @@ void WindowFramework::Render() {
 				Sample.MouseReset();
 			}
 
-			cur = std::chrono::system_clock::now();
-			dur =  std::chrono::duration_cast<mms>(cur - lasttime).count();
-			lasttime = cur;
+			end = std::chrono::system_clock::now();
+			dur =  std::chrono::duration_cast<mms>(end - start).count();
+
 			spare = 1000000/90 - dur;
 			if(spare > 0)
 			{
 				usleep(spare);
+				dur += spare;
 			}
+
 			frameRate = 1000000/(double)dur;
-//			printf("fps = %0.3f\n", frameRate);
+			printf("fps = %0.3f\n", frameRate);
 		}
 	}
 	Sample.Deinitialize();
